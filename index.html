@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TopXplorer</title>
+
+  <title>TopXplorer - Discover Top 10s in Travel, Movies, Tech & More</title>
+  <meta name="description" content="Explore trending top 10 lists on TopXplorer. From travel destinations to movies, gadgets, and more – discover what's best!">
+  <meta name="keywords" content="Top 10, TopXplorer, top 10 blogs, best lists, movies, travel, technology, trending topics, India">
+  <meta name="author" content="TopXplorer Team">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="TopXplorer - Discover Top 10s in Travel, Movies, Tech & More">
+  <meta property="og:description" content="Explore trending top 10 lists across different categories on TopXplorer.">
+  <meta property="og:image" content="images/logo.png"> <!-- Replace with your real image URL -->
+  <meta property="og:url" content="https://topxplorer.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TopXplorer - Discover Top 10s in Travel, Movies, Tech & More">
+  <meta name="twitter:description" content="Your go-to source for the best Top 10s – travel, movies, tech, and more.">
+  <meta name="twitter:image" content="images/logo.png">
+
+  <link rel="icon" type="png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>TopXplorer</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+      <form class="search-form" onsubmit="return false;">
+        <input type="text" id="searchInput" placeholder="Search Top 10s...">
+        <button type="submit">Search</button>
+        <div id="suggestions"></div>
+      </form>
+          
+    </div>
+  </header>
+
+  <main>
+    <h2>Explore the Top 10 of Everything!</h2>
+    <p>From tech to travel, movies to meals — we've got your top 10s covered.</p>
+
+    <section class="cards" id="cardContainer">
+      <div class="card" data-title="Top 10 Movies">
+        <h3>Top 10 Movies</h3>
+        <img src="images/movies.png" alt="" height="200" width="200">
+        <p>Explore our handpicked top 10 movies of all time.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="card" data-title="Top 10 Gadgets">
+        <h3>Top 10 Gadgets</h3>
+        <img src="images/gadget.jpg" alt="" height="200" width="200">
+        <p>See the most trending gadgets right now.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="card" data-title="Top 10 Books">
+        <h3>Top 10 Books</h3>
+        <p>Discover must-read books across genres.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="card" data-title="Top 10 Travel Destinations">
+        <h3>Top 10 Travel Destinations</h3>
+        <p>Pack your bags for these dream locations.</p>
+        <a href="template.html">Read More</a>
+      </div>
+      <div class="card" data-title="Top 10 Music">
+        <h3>Top 10 Travel Music</h3>
+        <p>Pack your bags for these dream locations.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="card" data-title="Top 10 Food">
+        <h3>Top 10 Food</h3>
+        <p>Food.</p>
+        <a href="#">Read More</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 TopXplorer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const suggestions = document.getElementById("suggestions");
+    const cards = document.querySelectorAll(".card");
+  
+    const titles = Array.from(cards).map(card => card.getAttribute("data-title"));
+  
+    searchInput.addEventListener("input", () => {
+      const term = searchInput.value.toLowerCase();
+      let matched = 0;
+      suggestions.innerHTML = "";
+  
+      titles.forEach(title => {
+        const titleLower = title.toLowerCase();
+        if (titleLower.includes(term) && term !== "") {
+          const div = document.createElement("div");
+          div.textContent = title;
+          div.className = "suggestion-item";
+          div.onclick = () => {
+            searchInput.value = title;
+            filterCards(title);
+            suggestions.innerHTML = "";
+          };
+          suggestions.appendChild(div);
+        }
+      });
+  
+      filterCards(term);
+    });
+  
+    function filterCards(term) {
+      let found = false;
+      cards.forEach(card => {
+        const title = card.getAttribute("data-title").toLowerCase();
+        const show = title.includes(term.toLowerCase());
+        card.style.display = show ? "block" : "none";
+        if (show) found = true;
+      });
+
+      if (!found && term !== "") {
+        suggestions.innerHTML = '<div class="suggestion-item no-result">No results found.</div>';
+      }
+    }
+
+  </script>
+  
+  
+</body>
+</html>

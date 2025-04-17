@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 Travel Places | TopXplorer</title>
+  <link rel="icon" type="png" href="./Screenshot 2025-04-16 000559.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>TopXplorer</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+      <form class="search-form" action="index.html" method="GET">
+        <input type="text" name="query" placeholder="Search Top 10s..." required>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="content-page">
+    <h2>Top 10 Travel Places in the World</h2>
+    <p>Explore the most breathtaking destinations that should be on your bucket list.</p>
+
+    <ol class="top10-list">
+      <li>
+        <h3>Paris, France</h3>
+        <p>The city of lights, love, and history.</p>
+      </li>
+      <li>
+        <h3>Kyoto, Japan</h3>
+        <p>Traditional temples, cherry blossoms, and cultural charm.</p>
+      </li>
+      <li>
+        <h3>Cape Town, South Africa</h3>
+        <p>Mountains, beaches, and wine country adventures.</p>
+      </li>
+      <!-- Continue till 10 -->
+    </ol>
+  </main>
+
+  <footer>
+    <p>© 2025 TopXplorer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Basic filtering on individual pages if needed
+    const searchInput = document.getElementById("searchInput");
+    searchInput?.addEventListener("input", () => {
+      alert("Search is available on homepage. Redirecting...");
+    });
+  </script>
+</body>
+</html>
