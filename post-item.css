@@ -124,6 +124,90 @@ body {
     color: #333;
   }
 
+   main {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card h3 {
+    margin-top: 0;
+  }
+  
+  .card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  /* === Responsive Styling === */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav {
+      flex-direction: column;
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .search-form {
+      width: 100%;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .search-form input {
+      width: 100%;
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  
+    .content-page {
+      padding: 20px 10px;
+    }
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+
   footer {
     background-color: #222;
     color: #fff;
