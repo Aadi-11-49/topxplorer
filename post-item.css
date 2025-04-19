@@ -71,19 +71,9 @@ body {
     background: #0055aa;
   }
 
-  @media (max-width: 600px) {
-  .search-form {
-    flex-direction: column; /* Stack input and button vertically */
-    width: 100%;
-    max-width: 100%;
+  input{
+  max-width: fit-content;
   }
-
-  .search-form input,
-  .search-form button {
-    width: 100%; /* Both input and button will take full width */
-    box-sizing: border-box;
-  }
-}
 
 
   .intro h2 {
