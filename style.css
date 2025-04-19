@@ -57,6 +57,7 @@ body {
     border: 1px solid #ccc;
     outline: none;
     width: 180px;
+    max-width: fit-content;
   }
   
   .search-form button {
@@ -66,6 +67,7 @@ body {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    max-width: fit-content;
   }
   
   .search-form button:hover {
