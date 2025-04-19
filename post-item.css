@@ -93,7 +93,7 @@ body {
     border-left: 5px solid #080d12;
     border-radius: 12px;
     padding: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     box-shadow: 0 4px 12px rgba(0, 74, 173, 0.1);
     transition: all 0.3s ease-in-out;
     margin-left: 5%;
@@ -129,6 +129,28 @@ body {
     color: #fff;
     padding: 10px;
     text-align: center;
+  }
+
+ @media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-form {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-form input {
+    width: 100%;
   }
 
   
