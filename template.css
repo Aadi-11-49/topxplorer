@@ -206,4 +206,40 @@ body {
   .related-post a:hover {
     text-decoration: underline;
   }
+
+
+  /* Layout wrapper */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 5%;
+}
+
+/* Left side - Main blog */
+.main-blog {
+  flex: 3;
+}
+
+/* Right side - Suggested posts */
+.related-post {
+  flex: 1;
+  margin-top: 0;
+  position: sticky;
+  top: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .related-post {
+    position: static;
+    margin-top: 40px;
+  }
+}
   
