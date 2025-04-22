@@ -169,7 +169,7 @@ body {
   @media (max-width: 768px) {
     .blog-item {
       flex-direction: column-reverse;
-      text-align: center;
+      text-align: left;
     }
     
     .blog-image {
