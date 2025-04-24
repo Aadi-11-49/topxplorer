@@ -240,4 +240,79 @@ body {
     margin-top: 40px;
   }
 }
+
+
+
   
+/* Scope styles only within #riddle-quiz */
+#riddle-quiz {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  color: #333;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Riddle question */
+#riddle-quiz p strong {
+  font-size: 1.2rem;
+  color: #1a73e8;
+}
+
+/* Form styling */
+#riddle-quiz form#quizForm {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Radio options */
+#riddle-quiz input[type="radio"] {
+  margin-right: 10px;
+}
+
+#riddle-quiz label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Submit button */
+#riddle-quiz button {
+  padding: 10px 20px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#riddle-quiz button:hover {
+  background-color: #1663c7;
+}
+
+/* Result message */
+#riddle-quiz #result {
+  margin-top: 20px;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+#riddle-quiz #result:before {
+  content: "🧩 ";
+}
+
+#riddle-quiz #result.correct {
+  background-color: #e6f4ea;
+  color: #137333;
+}
+
+#riddle-quiz #result.incorrect {
+  background-color: #fce8e6;
+  color: #d93025;
+}
