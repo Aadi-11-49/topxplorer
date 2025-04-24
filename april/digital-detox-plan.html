@@ -181,6 +181,36 @@
   
       <!-- Suggested posts (right) -->
       <aside class="related-post">
+        <div id="riddle-quiz">
+            <p><strong>The Curious Corner  🧠: </strong> <br> A spark. A twist. A mystery to solve.
+              Each riddle hides a truth—can you uncover it?
+              Drop your guess and join the thinkers’ circle.  </p>
+
+                <form id="quizForm">
+                  <input type="radio" name="answer" value="Candle"> A Candle<br>
+                  <input type="radio" name="answer" value="Smartphone"> A Smartphone<br>
+                  <input type="radio" name="answer" value="Book"> A Book<br>
+                  <input type="radio" name="answer" value="Clock"> A Clock<br><br>
+                  <button type="button" onclick="checkAnswer()">Submit</button>
+                </form>
+
+                <p id="result" style="display:none;"></p>
+        </div>
+            <script>
+            function checkAnswer() {
+              const answer = document.querySelector('input[name="answer"]:checked');
+              if (!answer) return alert("Please select an answer!");
+              const result = document.getElementById("result");
+              if (answer.value === "Smartphone") {
+                result.innerText = "✅ Correct! It's the smartphone.";
+              } else {
+                result.innerText = "❌ Oops! The correct answer is: Smartphone.";
+              }
+              result.style.display = "block";
+            }
+            </script>
+
+        
         <h3>Suggested Posts</h3>
         <ul>
           <li><a href="/gadgets.html">Top 10 gadgets that are redefining in 2025</a></li>
