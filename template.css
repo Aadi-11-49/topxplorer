@@ -171,6 +171,7 @@ body {
     .blog-item {
       flex-direction: column-reverse;
       text-align: left;
+      display: flex;
     }
     
     .blog-image {
