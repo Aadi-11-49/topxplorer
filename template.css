@@ -171,9 +171,12 @@ body {
     .blog-item {
       flex-direction: column-reverse;
       text-align: left;
-      display: flex;
+      margin-left: 0%;
+      margin-right: 0%;
     }
-    
+    .blog-text p {
+      text-align: left;
+    }
     .blog-image {
       flex: 1 1 100%;
       max-width: 100%;
