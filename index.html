@@ -117,6 +117,13 @@
         <p>Discover 10 simple and powerful ways to improve your sleep quality</p>
         <a href="/april/top-10-ways-to-get-better-sleep.html">Read More</a>
       </div>
+
+      <div class="card" data-title="10 Small Habits That Dramatically Improved My Life">
+        <h3>10 Small Habits That Dramatically Improved My Life</h3>
+        <img src="/images/10-small-habits-that-dramatically-improved-my-life.png" alt="10 Small Habits That Dramatically Improved My Life" height="240" width="240">
+        <p>10 small habits that made a big difference in my life.</p>
+        <a href="/april/10-small-habits-that-dramatically-improved-my-life.html">Read More</a>
+      </div>
       
     </section>
   </main>
@@ -170,6 +177,17 @@
     }
 
   </script>
+
+  <script>
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      const link = card.querySelector('a');
+      if (link) {
+        window.location.href = link.href;
+      }
+    });
+  });
+</script>
   
   
 </body>
