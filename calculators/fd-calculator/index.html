@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Primary Meta Tags -->
+<title>FD Calculator – Fixed Deposit Maturity & Interest Calculator | TopXplorer</title>
+<meta name="description" content="Calculate Fixed Deposit maturity amount and interest earned using this free FD calculator with pie chart visualization and multi-currency support.">
+<meta name="keywords" content="FD calculator, fixed deposit calculator, FD maturity calculator, FD interest calculator, compound interest FD">
+<meta name="author" content="TopXplorer">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://topxplorer.com/calculators/fd-calculator/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="FD Calculator – Fixed Deposit Returns Calculator | TopXplorer">
+<meta property="og:description" content="Free FD calculator to calculate fixed deposit maturity amount and interest with visual pie chart representation.">
+<meta property="og:url" content="https://topxplorer.com/calculators/fd-calculator/">
+<meta property="og:site_name" content="TopXplorer">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FD Calculator – Fixed Deposit Calculator | TopXplorer">
+<meta name="twitter:description" content="Calculate FD returns, interest earned, and maturity amount using this free online FD calculator.">
+
+<!-- Theme / Browser -->
+<meta name="theme-color" content="#0d6efd">
+<meta name="msapplication-TileColor" content="#0d6efd">
+
+<!-- Language -->
+<meta http-equiv="Content-Language" content="en">
+
+<!-- SEO Signals -->
+<meta name="rating" content="general">
+<meta name="distribution" content="global">
+<meta name="revisit-after" content="7 days">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">TopXplorer</a>
+    <nav>
+      <a href="/#calculators">Calculators</a>
+      <a href="/about/">About Us</a>
+      <a href="/contact/">Contact</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/disclaimer/">Disclaimer</a>
+      <a href="/terms/">Terms & Conditions</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <h1>FD Calculator</h1>
+  <p>Calculate Fixed Deposit (FD) maturity amount with interest.</p>
+
+  <!-- AD PLACEHOLDER -->
+  <div class="ad-box">
+  <script>
+    atOptions = {
+      'key' : '9ab19f1ec1b15bb7ad69b13ff51cf1c9',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/9ab19f1ec1b15bb7ad69b13ff51cf1c9/invoke.js"></script>
+</div>
+
+
+  <div class="calculator-box">
+
+    <label>Select Currency</label>
+      <!-- Currency Selector -->
+    <div class="currency-selector">
+      <select onchange="setCurrency(this.value)">
+        <option value="INR">₹ INR</option>
+        <option value="USD">$ USD</option>
+        <option value="EUR">€ EUR</option>
+        <option value="GBP">£ GBP</option>
+      </select>
+    </div>
+
+    <label>Deposit Amount</label>
+    <input type="number" id="principal" placeholder="Enter amount">
+
+    <label>Annual Interest Rate (%)</label>
+    <input type="number" id="rate" placeholder="e.g. 6.5">
+
+    <label>Time Period (Years)</label>
+    <input type="number" id="time" placeholder="e.g. 5">
+
+    <button onclick="calculateFD()">Calculate FD</button>
+
+    <div id="fdResult"></div>
+
+    <canvas id="fdChart" width="300" height="300" style="margin:20px auto; display:block;"></canvas>
+  </div>
+
+  <!-- AD PLACEHOLDER -->
+  <div class="ad-box">
+  <script>
+    atOptions = {
+      'key' : '9ab19f1ec1b15bb7ad69b13ff51cf1c9',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/9ab19f1ec1b15bb7ad69b13ff51cf1c9/invoke.js"></script>
+</div>
+
+
+  <section>
+  <h2>What is an FD Calculator?</h2>
+  <p>
+    An FD calculator is an online tool that helps you calculate the maturity amount and interest earned on a
+    fixed deposit investment. Fixed deposits are one of the safest investment options offering guaranteed
+    returns over a fixed period.
+  </p>
+
+  <h2>How Does the FD Calculator Work?</h2>
+  <p>
+    This FD calculator uses the compound interest formula to calculate returns based on the deposit amount,
+    interest rate, and investment duration. It also visually displays the breakup of principal and interest
+    using a pie chart.
+  </p>
+
+  <h2>Why Use an Online FD Calculator?</h2>
+  <p>
+    Manually calculating FD returns can be confusing, especially for long-term deposits. An FD calculator
+    eliminates errors and provides instant results, helping investors make informed decisions.
+  </p>
+
+  <p>
+    This calculator is suitable for estimating FD returns across different currencies and investment periods.
+  </p>
+</section>
+
+<div class="adsterra-native-ad">
+    <script async="async" data-cfasync="false" src="https://pl28542249.effectivegatecpm.com/b07b56b5d425ca473d3861d21aa32de0/invoke.js"></script>
+<div id="container-b07b56b5d425ca473d3861d21aa32de0"></div>
+</div>
+
+<section>
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Is this FD calculator accurate?</h3>
+  <p>
+    Yes, this FD calculator uses standard compound interest calculations to provide accurate maturity values.
+  </p>
+
+  <h3>Does this calculator include tax deductions?</h3>
+  <p>
+    No, this calculator shows gross returns only. Taxes may apply depending on local regulations.
+  </p>
+
+  <h3>Can I use this FD calculator for any currency?</h3>
+  <p>
+    Yes, the calculator supports multiple currencies for display purposes.
+  </p>
+</section>
+
+<section class="internal-links">
+  <h2>Related Calculators</h2>
+  <ul>
+    <li><a href="/calculators/loan-emi-calculator/">Loan EMI Calculator</a></li>
+    <li><a href="/calculators/sip-calculator/">SIP Calculator</a></li>
+    <li><a href="/calculators/fd-calculator/">FD Calculator</a></li>
+    <li><a href="/calculators/salary-calculator/">Salary Calculator</a></li>
+    <li><a href="/calculators/bmi-calculator/">BMI Calculator</a></li>
+    <li><a href="/calculators/age-calculator/">Age Calculator</a></li>
+    <li><a href="/calculators/percentage-calculator/">Percentage Calculator</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <a href="/privacy-policy/">Privacy Policy</a> |
+    <a href="/disclaimer/">Disclaimer</a>
+  </div>
+</footer>
+
+<!-- Currency -->
+<script src="/assets/js/currency.js"></script>
+<script>
+  document.querySelector(".currency-selector select").value = getSelectedCurrency();
+</script>
+
+<!-- FD Logic -->
+<!-- <script src="/assets/js/fd.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/assets/js/fd.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this FD calculator accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this FD calculator uses compound interest formula to calculate accurate fixed deposit returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this FD calculator include tax deductions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the calculator shows gross returns and does not include tax deductions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this FD calculator for any currency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the FD calculator supports multiple currencies for display."
+      }
+    }
+  ]
+}
+</script>
+
+
+</body>
+</html>
